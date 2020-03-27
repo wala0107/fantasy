@@ -45,23 +45,71 @@ Table of Content:
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 
-
+ol.list {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+}
+li.list {
+  counter-increment: my-awesome-counter;
+  margin: 0.25rem;
+  font-size: 20px;
+  line-height: 50px;
+}
+li.list::before {
+  content: counter(my-awesome-counter);
+  background: #662974;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 2rem;
+  color: white;
+  text-align: center;
+  margin-right: 0.5rem;
+}
+ol ol li.list::before {
+  background: #DE51FF;
+}
+ol ol ol li::before {
+  background: #EE9EFF;
+}
+li.pilier{
+  font-weight: bold;
+}
+body {
+  font-family: 'PT Serif', serif;
+}
 img.gif {
   width: 350px;
   height: 350px;
 }
+
+h1.welcome {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+img.welcome {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
 img.img-gif {
   padding-top: 25px;
   width: 250px;
   height: 250px;
 }
+
 img.gif2 {
-  width:80px;
+  width: 80px;
   height: 80px;
 }
-img.img-gif2{
-width: 370px;
-height: 370px;
+
+img.img-gif2 {
+  width: 370px;
+  height: 370px;
 }
 
 .blog-meta.white .read_more:hover {
@@ -114,10 +162,12 @@ h6 {
   color: #000;
   margin: 0;
 }
+
 .single_travel a {
   color: #ffffff;
   font-size: 20px;
 }
+
 button:focus {
   outline: none;
   box-shadow: none;
@@ -242,9 +292,10 @@ button:focus {
   max-width: 510px;
   margin-bottom: 50px;
 }
+
 .main_title2 {
   text-align: center;
-  
+
   margin-bottom: 50px;
 }
 
@@ -320,11 +371,13 @@ button:focus {
   font-size: 20px;
   font-weight: 500;
 }
+
 .read-more {
   color: #000;
   font-size: 20px;
   font-weight: 500;
 }
+
 a.read-more {
   color: #000;
   font-size: 20px;
@@ -1645,15 +1698,36 @@ h6.overlay {
   padding: 0px 30px;
   background: #fff;
 }
-img.blog-image{
+
+img.blog-image {
   width: 70px;
   height: 70px;
 }
 
-p.welcome{ color: white;}
+p.welcome2 {
+  color: white;
+}
+
+p.welcome2 {
+  font-size: 25px;
+  line-height: 50px;
+  color: black;
+
+}
+p.welcome3 {
+margin-top: 20px;
+  color: black;
+  font-size: 25px;
+  padding-top: 20px;
+  text-align: left;
+  line-height: 50px;
+}
 
 
-h3.welcome{ color: black;}
+h3.welcome {
+  color: black;
+}
+
 .blog_right_sidebar {
   padding: 30px;
   background: rgb(231, 174, 174);
@@ -4272,16 +4346,18 @@ h6 {
 .row.m0.post_cat_item {
   margin-bottom: 40px;
 }
-h4.lien{
+
+h4.lien {
   font-size: 50px;
 }
+
 /* End Blog Style One Area css
 ============================================================================================ */
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*============== footer-area css ===============*/
 .footer-area {
-  background:lightpink;
+  background: lightpink;
   font-size: 16px;
 }
 
